@@ -74,6 +74,10 @@ function getData() {
                 setText("#calendar", data["calendar"]);
                 $(".card-event").css("display","block").css("opacity",1);
         });
+
+        if (Date().indexOf("Jun 17") > -1) {
+            $(".card-birthday").css("display","block").css("opacity",1);
+        }
         
         setTimeout(getData, 120000)
 }

@@ -129,6 +129,12 @@ a.button-card:hover {
     background-size: 100%;
     padding-top: 70%;
 }
+.card-birthday {
+    background: url("img/cake.jpg") #D81B60 no-repeat;
+    color: white;
+    background-size: 100%;
+    padding-top: 101%;
+}
 .card-contact {
     display: block;
     opacity: 1;
