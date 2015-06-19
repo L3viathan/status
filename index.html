@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <head>
+        <title>status.l3vi.de</title>
+        <link rel="stylesheet" href="masonry.css" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+        <script src="/jquery.min.js"></script>
+        <script src="status.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="list">
+                <div class="card-location item">
+                    <!-- <img src="img/location.jpg" class="img-card"> -->
+                    <span class="title">Location</span>
+                    <span class="desc">I'm currently near <span id="address">(loading)</span></span>
+                    <a href="" class="button-card" id="link-map">MAP</a>
+                </div>
+                <div class="card-time item">
+                    <span class="title">Time</span>
+                    <span class="desc">Where I am, it's <span id="time">(loading)</span>.</span>
+                </div>
+                <div class="card-mood item">
+                    <span class="title">Mood</span>
+                    <span class="desc">I'm feeling <span id="mood">(loading)</span>.</span>
+                </div>
+                <div class="card-weather item">
+                    <span class="title">Weather</span>
+                    <span class="desc">There is <span id="weather">(loading)</span> in <span id="city">(loading)</span>.
+                    <br />The temperature is <span id="temp">(loading)</span>.</span>
+                </div>
+                <div class="card-contact item">
+                    <span class="title">Contact</span>
+                    <span class="desc">Contact me by mail, or through some social network.</span>
+                    <a href="mailto:web@l3vi.de" class="button-card">EMAIL</a>
+                    <a href="https://twitter.com/l3viathan2142" class="button-card">TWITTER</a>
+                    <a href="https://facebook.com/oberlaender" class="button-card">FACEBOOK</a>
+                </div>
+                <div class="card-phone item">
+                    <span class="title">Phone</span>
+                    <span class="desc">My phone's battery is at <span id="battery">0%</span> (and this is <span id="batterytime">probably out of date</span>).</span>
+                </div>
+                <div class="card-event item">
+                    <span class="title">Current Event</span>
+                    <span class="desc">The current event is <span id="calendar">(loading)</span>.</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+/* from http://osvaldas.info/responsive-jquery-masonry-or-pinterest-style-layout, with slight modifications */
+#wrapper
+{
+    max-width: 60em;
+    margin: 0 auto;
+}
+#list
+{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -1.875em; /* 30px */
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1.875em; /* 30px */
+    -webkit-column-fill: auto;
+    -moz-column-count: 3;
+    -moz-column-gap: 1.875em; /* 30px */
+    -moz-column-fill: auto;
+    column-count: 3;
+    column-gap: 1.875em; /* 30px */
+    column-fill: auto;
+}
+.item
+{
+    margin-bottom: 1.875em; /* 15px 30px */
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+@media only screen and ( max-width: 50em ) /* 640px */
+{
+    #list
+    {
+        -webkit-column-count: 2;
+        -webkit-column-gap: 0.938em; /* 15px */
+        -moz-column-count: 2;
+        -moz-column-gap: 0.938em; /* 15px */
+        column-count: 2;
+        column-gap: 0.938em; /* 15px */
+    }
+    .item
+    {
+        margin-bottom: 0.938em; /* 15px */
+    }
+}
+@media only screen and ( max-width: 30em ) /* 320px */
+{
+    #list
+    {
+        -webkit-column-count: auto;
+        -moz-column-count: auto;
+        column-count: auto;
+    }
+}
+/* until here. */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: aliceblue;
+}
+#wrapper {
+    margin-top: 50px;
+}
+.item {
+    background-color: #eee;
+    border-radius: .2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.5s ease;
+    padding:16px;
+    word-wrap: break-word;
+    display: none;
+    opacity: 0;
+}
+.item:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.19), 0 2px 4px rgba(0,0,0,0.23);
+}
+.item .title {
+    font-size: 120%;
+    display: block;
+    margin-bottom: 2px;
+}
+.item span.title:after, .item span.desc:after {
+    content:"\A";
+    white-space:pre;
+}
+a.button-card:link, a.button-card:visited, a.button-card:active {
+    text-decoration: none;
+    margin-top: 7px;
+    padding: 5px;
+    display: inline-block;
+    color: #2889be;
+    margin-bottom: -5px;
+    margin-left: -5px;
+}
+a.button-card:hover {
+    color: white;
+    background-color: #2889be;
+}
+
+
+/* cards */
+.card-location a.button-card {
+    color: white;
+}
+.card-location a.button-card:hover {
+    background-color: white;
+    color: #3f51b5;
+}
+.card-phone {
+    background: url("img/phone.jpg") #4caf50 no-repeat;
+    background-size: 100%;
+    padding-top: 50%;
+}
+.card-weather {
+    background: url("img/weather.jpg") #42A5F5 /*fbc02d yellow */ no-repeat;
+    background-size: 100%;
+    padding-top: 64%;
+}
+.card-location {
+    background: url("img/location.jpg") #3d5afe no-repeat;
+    color: white;
+    background-size: 100%;
+    padding-top: 61%;
+}
+.card-time {
+    background: url("img/time.jpg") #827717 no-repeat;
+    color: white;
+    background-size: 100%;
+    padding-top: 70%;
+}
+.card-contact {
+    display: block;
+    opacity: 1;
+}
+/* magenta: E91E63 */
